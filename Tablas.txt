@@ -1,0 +1,29 @@
+create table CARSMARISOL (
+   C_ID                 int                  not null,
+   A_ID                 int                  not null,
+   PRECIO               numeric(5,2)         null,
+   constraint PK_CARSMARISOL primary key (C_ID, A_ID)
+)
+
+create table CLIENTES (
+   C_ID                 int                  not null,
+   C_CEDULA             varchar(10)          null,
+   C_NOMBRE             varchar(15)          null,
+   C_APELLIDO           varchar(15)          null,
+   C_TELEFONO           varchar(10)          null,
+   C_MATRICULA          varchar(10)          null,
+   constraint PK_CLIENTES primary key (C_ID)
+)
+
+create table TIPO_DE_ACEITE (
+   A_ID                 int                  not null,
+   A_TIPO               varchar(20)          null,
+   constraint PK_TIPO_DE_ACEITE primary key (A_ID)
+)
+
+create table VEHICULO (
+   V_ID                 int                  not null,
+   C_ID                 int                  null,
+   V_MARCA              varchar(20)          null,
+   constraint PK_VEHICULO primary key (V_ID)
+)
